@@ -35,7 +35,8 @@ export default
     ToDoItem,
     
   },
-  data() {
+  data() 
+  {
     return{
     ToDoItems:[
     {todo_id:1, title:'Buy bread', description: 'Remember to go to the shops to buy bread', date:'2022-01-01', categories: ['Shopping','Groceries','Food'],done:false},
