@@ -3,11 +3,10 @@
     <h1>To-Do List</h1>
     <searchBar/>
     <to-do-form @todo-added="addToDo"></to-do-form>
-    <h2 id="list-summary" ref="listSummary" tabindex="-1">{{ listSummary }}</h2>
     <ul aria-labelledby="list-summary" class="stack-large">
       <li v-for="item in ToDoItems" :key="item.id">
         <to-do-item
-          :label="item.label"
+          :label="item.title"
           :done="item.done"
           :id="item.id"
           @checkbox-changed="updateDoneStatus(item.id)"
@@ -45,6 +44,7 @@ export default
     {todo_id:4, title:'Pay the ISP', date:'2022-01-01', categories: null,done:false}]
     };
   },
+
   methods: 
   {
     addToDo(todo_id,title,description,date,categories,) 
@@ -68,18 +68,22 @@ export default
       const objectIndex = this.ToDoItems.findIndex((object) => object.todo_id === todo_id);
       this.ToDoItems.splice(objectIndex, 1);
       this.$refs.listSummary.focus();
-    }
-  },
-  computed: 
-  {
-    listSummary() {
-      const numberFinishedItems = this.ToDoItems.filter(
-        (object) => object.done
-      ).length;
-      return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`;
     },
+    sortlist(){
+    let todoItems = this.ToDoItems;
+    todoItems.sort(function (a, b) 
+    {
+  if (a.name < b.name) {
+    return -1;
+    }
+  if (a.name > b.name) {
+    return 1;
+    }
+  return 0; 
   }
-};
+    )}
+}
+}
 
 </script>
 
@@ -107,6 +111,7 @@ export default
 .btn__primary {
   color: #fff;
   background-color:green;
+  
 }
 .btn-group {
   display: flex;

@@ -8,7 +8,7 @@
         :id="id"
         :checked="isDone"
         @change="$emit('checkbox-changed')" />
-      <label :for="id" class="checkbox-label">{{ label }}</label>
+      <label :for="id" class="checkbox-label">{{ title }}</label>
     </div>
     <div class="btn-group">
       <button
@@ -17,18 +17,21 @@
         ref="editButton"
         @click="toggleToItemEditForm">
         Edit
-        <span class="visually-hidden">{{ label }}</span>
+        <span class="visually-hidden">{{ title }}</span>
       </button>
       <button type="button" class="btn btn__danger" @click="deleteToDo">
         Delete
-        <span class="visually-hidden">{{ label }}</span>
+        <span class="visually-hidden">{{ title }}</span>
       </button>
     </div>
   </div>
   <to-do-item-edit
     v-else
     :id="id"
-    :label="label"
+    :title="title"
+    :description="description"
+    :date="date"
+    :categories="categories"
     @item-edited="itemEdited"
     @edit-cancelled="editCancelled"></to-do-item-edit>
 </template>

@@ -1,30 +1,48 @@
 <template>
-    <v-card
-      class="pa-4"
-      flat
-      height="300px"
-      img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg"
-    >
-      <v-toolbar
-        dense
-        floating
-      >
-        <v-text-field
-          hide-details
-          prepend-icon="mdi-magnify"
-          single-line
-        ></v-text-field>
-      </v-toolbar>
-    </v-card>
-  </template>
+  <div class="search-bar">
+    <input type="text" v-model="searchQuery" placeholder="Search...">
+    <button @click="search">Search</button>
+  </div>
+</template>
 
 <script>
-
-export default 
-{
-  name:'searchBar',
-  methods: 
-  {
-  }
+export default {
+  data() {
+    return {
+      searchQuery: "",
+    };
+  },
+  methods: {
+    search() {
+      // handle search logic
+      console.log("Searching for:", this.searchQuery);
+    },
+  },
 };
 </script>
+
+<style>
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>

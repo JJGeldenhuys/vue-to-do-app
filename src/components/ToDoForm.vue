@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit">
     <h2 class="label-wrapper">
-      <label for="new-todo-input" class="label__lg">
+      <label for="new-todo-input" class="label__default">
         To-Do that need to be done?
       </label>
     </h2>
@@ -13,7 +13,7 @@
       autocomplete="off"
       v-model.lazy.trim="title"
       max-width="50px"
-      class="input__lg" />
+      class="input__default" />
       <input
       type="text"
       id="new-todo-description"
@@ -22,7 +22,7 @@
       autocomplete="off"
       v-model.lazy.trim="description"
       max-width="50px"
-      class="input__lg" />
+      class="input__default" />
       <datePicker></datePicker>
       <input
       type="text"
@@ -31,9 +31,9 @@
       placeholder="Category"
       autocomplete="off"
       v-model.lazy.trim="description"
-      max-width="50px"
-      class="input__lg" />
-    <button type="submit" class="btn btn__primary btn__lg">Add</button>
+      max-width="100px"
+      class="input__default" />
+    <button type="submit" class="btn btn__primary btn__default">Add</button>
   </form>
 </template>
 
