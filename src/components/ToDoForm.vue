@@ -23,7 +23,7 @@
       v-model.lazy.trim="description"
       max-width="50px"
       class="input__default" />
-      <datePicker></datePicker>
+      <DatePicker/>
       <input
       type="text"
       id="new-todo-category"
@@ -38,13 +38,13 @@
 </template>
 
 <script>
-import datePicker from "./datePicker.vue";
+import DatePicker from "./datePicker.vue";
 
 export default 
 {
 
   name:"ToDoForm",
-  components: datePicker,
+  components: {DatePicker},
 
   methods: {
     onSubmit() {
