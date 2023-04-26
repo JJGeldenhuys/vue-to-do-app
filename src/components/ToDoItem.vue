@@ -1,4 +1,5 @@
 <template>
+
   <div class="stack-small" v-if="!isEditing">
     <div class="custom-checkbox">
       <input
