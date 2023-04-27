@@ -9,8 +9,14 @@
   },
   "main": "main.js",
   "dependencies": {
+    "@mdi/font": "5.9.55",
+    "@vuepic/vue-datepicker": "^4.5.1",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "prettier": "^2.8.8",
+    "roboto-fontface": "*",
+    "vue": "^3.2.13",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,8 +27,9 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "sass": "~1.32.0",
-    "sass-loader": "^10.0.0"
-
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
   },
   "eslintConfig": {
     "root": true,

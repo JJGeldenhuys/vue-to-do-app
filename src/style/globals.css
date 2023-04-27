@@ -1,0 +1,89 @@
+@import '@/style/theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html{
+    background-color: #042128;
+}
+.button-primary, .button-secondary, .button-delete{
+    min-width: 100px;
+    margin: 20px 10px;
+    background-color: var(--primary-color);
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    font-family: var(--font-family-1);
+    font-size: var(--button-font-size);
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+.button-primary:hover, .button-secondary:hover, .button-delete:hover, .icon-button:hover{
+    transform: scale(1.2);
+}
+
+.button-secondary{
+    background-color: var(--secindary-color) !important;
+}
+
+.button-delete{
+    background-color: var(--delete-color) !important;
+}
+
+.text-input{
+    min-width: 200px;
+    font-family: var(--font-family-1);
+    font-weight: 400;
+    padding:5px 10px;
+    font-size: var(--text-input-font-size);
+    line-height: 24px;
+    border-radius: 8px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: 1px solid rgba(44, 44, 44, 0.22);
+}
+
+.input-label{
+    font-family: var(--font-family-1);
+    font-size: var(--label-font-size);
+    font-weight: 450;
+}
+
+.checkbox-input{
+    border-radius: 8px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: 1px solid rgba(44, 44, 44, 0.22);
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    padding: 10px;
+    margin:5px 10px;
+}
+
+.icon-button:active, .button-primary:active, .button-delete:active, .button-secondary:active{
+    transform: scale(0.8);
+}
+
+.grid{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-column{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    min-height: 150px ;
+    justify-content: space-between;
+    align-content: center;
+}

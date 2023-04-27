@@ -1,0 +1,11 @@
+:root{
+    --primary-color: #3092CF;
+    --secindary-color: #49a8af;
+    --accent-color: #FFFFFF;
+    --secondary--accent-color: #000000;
+    --font-family-1:'Roboto', sans-serif;
+    --button-font-size:16;
+    --text-input-font-size:16;
+    --label-font-size:18;
+    --delete-color: #dc0101;
+}

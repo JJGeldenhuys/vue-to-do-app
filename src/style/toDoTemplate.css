@@ -1,0 +1,42 @@
+@import "globals.css";
+
+.todo-template-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    margin:0 auto;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.todo-template-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 90vw;
+}
+
+.neon{
+    color: #fff;
+    animation: 1.5s blink linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    from{
+        text-shadow: none;
+    }
+    to{
+        text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+    }
+}

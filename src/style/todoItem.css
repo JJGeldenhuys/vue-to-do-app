@@ -1,0 +1,24 @@
+@import "globals.css";
+
+.item-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+    border-bottom: 1px solid rgba(47, 47, 47, 0.22);
+    margin-bottom: 20px;
+}
+
+.icon-wrapper{
+    width: 100px;
+    height: 60px;
+    padding: 10px 0;
+}
+
+.input-wrapper{
+    width: 250px;
+    height: 60px;
+    padding: 20px 0;
+    justify-content: start;
+    display: flex;
+}

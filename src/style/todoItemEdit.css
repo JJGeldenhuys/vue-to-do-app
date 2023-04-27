@@ -1,0 +1,23 @@
+@import 'globals.css';
+
+.input-container{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width:300px;
+    padding: 5px 20px;
+    margin: auto;
+}
+
+.form-wrapper{
+    margin: auto;
+    width: 350px;
+    padding:25px 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 14px;
+}
+
+.button-container{
+    margin: auto;
+    width: 240px;
+}
