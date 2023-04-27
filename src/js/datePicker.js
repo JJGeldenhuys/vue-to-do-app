@@ -10,7 +10,6 @@ export default {
     Watch: {
         date(newVal, oldVal) {
             console.log(newVal, oldVal);
-            z;
             this.$emit("date-data", newVal);
         },
     },
