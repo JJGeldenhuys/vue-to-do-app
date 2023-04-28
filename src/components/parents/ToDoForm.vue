@@ -12,6 +12,7 @@
                         placeholder="What is the To-do?"
                         autocomplete="off"
                         v-model.lazy.trim="title"
+                        clearable="true"
                         class="text-input"
                     />
                     <label class="input-label">description</label>
@@ -21,6 +22,7 @@
                         name="new-description"
                         placeholder="To-do Description?"
                         autocomplete="off"
+                        clearable
                         v-model.lazy.trim="description"
                         class="text-input"
                     />

@@ -50,7 +50,8 @@ export default {
             const { title, categories, date, description } = dataObj;
             this.addToDo(title, description, date, categories);
         },
-        addToDo(title, description, date, categories) {
+        addToDo(title, description, date, categories) 
+        {
             this.ToDoItems.push({
                 id: this.ToDoItems.length + 1,
                 title: title,
@@ -59,6 +60,7 @@ export default {
                 categories: categories,
                 done: false,
             });
+
             this.sortList();
         },
 
@@ -69,7 +71,6 @@ export default {
             } else {
                 rawObject = this.ToDoItems;
             }
-            console.log(rawObject);
             rawObject.sort(function (a, b) {
                 if (a.title?.toUpperCase() < b.title?.toUpperCase()) {
                     return -1;

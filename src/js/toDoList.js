@@ -8,24 +8,22 @@ export default {
         listItems: {
             required: true,
             type: [],
+            done:null 
         },
     },
     methods: {
         editToDo(id) {
             return id;
         },
-        updateDoneStatus(todo_id) {
+        updateDoneStatus(id) {
             const toDoToUpdate = this.props.listItems.find(
-                (object) => object.todo_id === todo_id
+                (object) => object.todo_id === id
             );
             toDoToUpdate.done = !toDoToUpdate.done;
         },
-        deleteToDo(todo_id) {
-            const objectIndex = this.props.listItems.findIndex(
-                (object) => object.todo_id === todo_id
-            );
-            this.props.listItems.splice(objectIndex, 1);
-            this.$refs.listSummary.focus();
+        deleteToDo(id) 
+       {
+            this.listItems.splice(id, 1);
             this.sortList();
         },
         sortList() {

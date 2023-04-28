@@ -19,7 +19,6 @@
                 <to-do-item
                     :item="item"
                     :label="item.title"
-                    :done="item.done"
                     :id="item.id"
                     @checkbox-changed="updateDoneStatus(item.id)"
                     @item-deleted="deleteToDo(item.id)"

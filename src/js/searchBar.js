@@ -6,9 +6,15 @@ export default {
         };
     },
     methods: {
-        search() {
-            // handle search logic
-            console.log("Searching for:", this.searchQuery);
-        },
-    },
-};
+        filteredData() 
+        {
+            const searchQuery = this.searchQuery.toLowerCase();
+            return this.listItems.filter(item => 
+                {
+              return (
+                item.title.toLowerCase().indexOf(searchQuery) !== -1 
+              );
+            });
+          }
+        }
+    }
